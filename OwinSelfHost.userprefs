@@ -1,11 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OwinSelfHostedWeb\Views\Home\Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OwinSelfHost\Startup.cs">
     <Files>
-      <File FileName="OwinSelfHostedWeb\Controllers\HomeController.cs" Line="1" Column="1" />
-      <File FileName="OwinSelfHostedWeb\Views\Shared\_Layout.cshtml" Line="1" Column="1" />
-      <File FileName="OwinSelfHostedWeb\Views\Shared\Error.cshtml" Line="1" Column="1" />
-      <File FileName="OwinSelfHostedWeb\Views\Home\Index.cshtml" Line="1" Column="1" />
+      <File FileName="c:\Git\RaspPi\OwinSelfHost\OwinSelfHost\Program.cs" Line="1" Column="1" />
+      <File FileName="OwinSelfHost\Startup.cs" Line="13" Column="13" />
+      <File FileName="OwinSelfHost\Controllers\HomeController.cs" Line="26" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
