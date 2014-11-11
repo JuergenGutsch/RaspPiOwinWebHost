@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using Owin;
-using Webserver.Middleware;
+﻿using Owin;
 using Webserver.Options;
+using System;
+using Webserver.Middleware;
+using System.Web.Http;
+using System.Net.Http;
 
 namespace OwinSelfHost
 {
-	public class Startup
+
+    public class Startup1
+    {
+        public void Configuration (IAppBuilder app)
+        {
+            app.UseHandlerAsync ((request, response, next) => {
+                response.Write("Hallo Welt");
+                return next ();
+            });
+        }
+    }
+
+	public class Startup2
 	{
 		public void Configuration (IAppBuilder app)
 		{
@@ -28,15 +41,20 @@ namespace OwinSelfHost
 
 	}
 
-	public class Startup2
-	{
-		public void Configuration (IAppBuilder app)
-		{
-			app.UseHandlerAsync ((request, response, next) => {
-				response.Write("Hallo Welt");
-				return next ();
-			});
-		}
-	}
+    public class Startup3
+    {
+        public void Configuration (IAppBuilder app)
+        {
+            var config = new HttpConfiguration ();
+            config.Routes.MapHttpRoute (
+                name: "DefaultApi",
+                routeTemplate: "api/{Controller}/{id}",
+                defaults: new{id = RouteParameter.Optional}
+            );
+
+            app.UseWebApi (config);
+        }
+
+    }
 }
 

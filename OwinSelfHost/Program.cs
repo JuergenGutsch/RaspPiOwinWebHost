@@ -15,7 +15,7 @@ namespace OwinSelfHost
 
 			var uri = String.Format("http://localhost:{0}/", port);
 
-			using (WebApp.Start<Startup2>(uri))
+            using (WebApp.Start<Startup3>(uri))
 			{
 				Console.WriteLine("Started");
 				Console.WriteLine("Listening on Port {0}", port);
